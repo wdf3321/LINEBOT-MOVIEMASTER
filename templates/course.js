@@ -41,5 +41,23 @@ export default {
         ]
       }
     ]
+  },
+  footer: {
+    type: 'box',
+    layout: 'vertical',
+    spacing: 'sm',
+    contents: [
+      {
+        type: 'button',
+        style: 'link',
+        height: 'sm',
+        action: {
+          type: 'uri',
+          label: '介紹',
+          uri: 'https://linecorp.com'
+        }
+      }
+    ],
+    flex: 0
   }
 }
