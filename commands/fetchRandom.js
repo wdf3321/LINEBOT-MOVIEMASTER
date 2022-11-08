@@ -1,4 +1,3 @@
-
 import axios from 'axios'
 import template from '../templates/course.js'
 
@@ -6,7 +5,9 @@ import template from '../templates/course.js'
 export default async (event) => {
   try {
     const random1 = Math.ceil(Math.random() * 30)
-    const { data } = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=d870602b8d33fc12e2d09b56f83b190f&language=zh-TW&page=${random1}&region=TW`)
+    const { data } = await axios.get(
+      `https://api.themoviedb.org/3/movie/popular?api_key=d870602b8d33fc12e2d09b56f83b190f&language=zh-TW&page=${random1}&region=TW`
+    )
 
     // console.log(random)
     const movie = []
@@ -27,7 +28,7 @@ export default async (event) => {
 
     const reply = {
       type: 'flex',
-      altText: '十大熱門電影',
+      altText: '今天您適合',
       contents: {
         type: 'carousel',
         contents: movie
