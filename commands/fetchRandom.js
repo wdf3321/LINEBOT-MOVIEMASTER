@@ -17,11 +17,11 @@ export default async (event) => {
     const bubble = JSON.parse(JSON.stringify(template))
 
     console.log(random2)
-    bubble.hero.url = 'https://www.themoviedb.org/t/p/w300' + data.results[`${random2}`].poster_path
-    console.log(bubble.hero.url)
-    bubble.body.contents[0].text = data.results[`${random2}`].title
-    bubble.body.contents[1].contents[0].contents[0].text = data.results[`${random2}`].release_date
-    bubble.footer.contents[0].action.uri = `https://www.themoviedb.org/movie/${data.results[`${random2}`].id}`
+    bubble.body.contents[0].url = 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2' + data.results[`${random2}`].poster_path
+    // console.log(bubble.hero.url)
+    bubble.body.contents[1].contents[0].contents[0].text = data.results[`${random2}`].title
+    bubble.body.contents[1].contents[1].contents[0].text = data.results[`${random2}`].release_date
+    bubble.body.contents[1].contents[2].contents[0].action.uri = `https://www.themoviedb.org/movie/${data.results[`${random2}`].id}`
     movie.push(bubble)
 
     // console.log(data.results[0].id)

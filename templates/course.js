@@ -1,63 +1,81 @@
 export default {
   type: 'bubble',
-  hero: {
-    type: 'image',
-    url: 'https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png',
-    size: 'full',
-    aspectRatio: '20:13',
-    aspectMode: 'cover'
-
-  },
   body: {
     type: 'box',
     layout: 'vertical',
     contents: [
       {
-        type: 'text',
-        text: 'Brown Cafe',
-        weight: 'bold',
-        size: 'xl'
+        type: 'image',
+        url: 'https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip1.jpg',
+        size: 'full',
+        aspectMode: 'cover',
+        aspectRatio: '2:3',
+        gravity: 'top'
       },
       {
         type: 'box',
         layout: 'vertical',
-        margin: 'lg',
-        spacing: 'sm',
         contents: [
           {
             type: 'box',
-            layout: 'baseline',
-            spacing: 'sm',
+            layout: 'vertical',
             contents: [
               {
                 type: 'text',
-                text: 'Miraina Tower, 4-1-6 Shinjuku, Tokyo',
-                wrap: true,
-                color: '#666666',
-                size: 'sm'
+                text: '名稱',
+                size: 'xl',
+                color: '#ffffff',
+                weight: 'bold'
               }
             ]
+          },
+          {
+            type: 'box',
+            layout: 'baseline',
+            contents: [
+              {
+                type: 'text',
+                text: '日期',
+                color: '#ebebeb',
+                size: 'sm',
+                flex: 0
+              }
+            ],
+            spacing: 'lg'
+          },
+          {
+            type: 'box',
+            layout: 'vertical',
+            contents: [
+              {
+                type: 'button',
+                action: {
+                  type: 'uri',
+                  label: '介紹',
+                  uri: 'http://linecorp.com/'
+                },
+                color: '#FFFFFF',
+                offsetEnd: '0px',
+                offsetBottom: '3px'
+              }
+            ],
+            borderWidth: '1px',
+            cornerRadius: '4px',
+            spacing: 'sm',
+            borderColor: '#ffffff',
+            margin: 'xxl',
+            height: '40px'
           }
-        ]
-      }
-    ]
-  },
-  footer: {
-    type: 'box',
-    layout: 'vertical',
-    spacing: 'sm',
-    contents: [
-      {
-        type: 'button',
-        style: 'link',
-        height: 'sm',
-        action: {
-          type: 'uri',
-          label: '介紹',
-          uri: 'https://linecorp.com'
-        }
+        ],
+        position: 'absolute',
+        offsetBottom: '0px',
+        offsetStart: '0px',
+        offsetEnd: '0px',
+        backgroundColor: '#03303Acc',
+        paddingAll: '20px',
+        paddingTop: '18px'
       }
     ],
-    flex: 0
+    paddingAll: '0px'
   }
 }
