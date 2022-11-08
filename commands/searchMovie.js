@@ -4,7 +4,7 @@ import template from '../templates/course.js'
 export default async (event) => {
   try {
     const { data } = await axios.get(
-      `https://api.themoviedb.org/3/search/movie?api_key=d870602b8d33fc12e2d09b56f83b190f&language=zh-TW&query=${event.message.text}&page=1&include_adult=false&region=TW`
+      `https://api.themoviedb.org/3/search/movie?api_key=${process.env.API}&language=zh-TW&query=${event.message.text}&page=1&include_adult=false&region=TW`
     )
     if (data.total_pages === 0) {
       console.log(data.total_pages)

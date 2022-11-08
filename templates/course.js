@@ -71,7 +71,7 @@ export default {
         offsetBottom: '0px',
         offsetStart: '0px',
         offsetEnd: '0px',
-        backgroundColor: '#03303Acc',
+        backgroundColor: '#6a5a5a',
         paddingAll: '20px',
         paddingTop: '18px'
       }

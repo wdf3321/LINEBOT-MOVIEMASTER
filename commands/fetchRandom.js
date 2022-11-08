@@ -6,7 +6,7 @@ export default async (event) => {
   try {
     const random1 = Math.ceil(Math.random() * 30)
     const { data } = await axios.get(
-      `https://api.themoviedb.org/3/movie/popular?api_key=d870602b8d33fc12e2d09b56f83b190f&language=zh-TW&page=${random1}&region=TW`
+      `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API}&language=zh-TW&page=${random1}&region=TW`
     )
 
     // console.log(random)
