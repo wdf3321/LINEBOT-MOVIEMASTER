@@ -35,14 +35,6 @@ const bot = linebot({
 bot.on('message', async event => {
   if (event.message.type !== 'text') {
     return
-  }
-
-  if (event.message.text.includes('你', '好', '爛')) {
-    event.reply({
-      type: 'sticker',
-      packageId: '6632',
-      stickerId: '11825382'
-    })
 
   // // } else if (event.message.text.startsWith('查動畫')) {
   // //   fetchAnime(event)
@@ -57,8 +49,7 @@ bot.on('message', async event => {
     bot.on('postback', async event => {
       fetchGenre(event)
     })
-    // fetchGenre(event)
-  } else if (event.message.type === 'text' && event.message.text !== '五大熱門電影' && event.message.text !== '挑一隻片給我') {
+  } else if (event.message.type === 'text' && event.message.text !== '十大熱門電影' && event.message.text !== '挑一隻片給我') {
     searchMovie(event)
   }
   if (event.message.type === 'text' && event.message.text === '搜尋電影') {
