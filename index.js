@@ -24,17 +24,9 @@ const bot = linebot({
 //   USDJPY = result
 // })
 
-// let laobao = 0
-// scheduleJob('0 0 * * * ', async () => {
-//   laobao = await fetchRate2()
-// })
-// fetchRate2().then(result => {
-//   laobao = result
-// })
-
 bot.on('message', async event => {
   if (event.message.type !== 'text') {
-    return
+    event.reply('你好')
 
   // // } else if (event.message.text.startsWith('查動畫')) {
   // //   fetchAnime(event)
